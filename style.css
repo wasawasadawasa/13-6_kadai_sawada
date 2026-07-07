@@ -1,0 +1,194 @@
+/* ==========================================================================
+   カンプ画像およびデザインシステム指示書に基づくCSS設計
+   ========================================================================== */
+
+/* 全般的なリセット設定 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif; /* 指示書: フォント Inter */
+    background-color: #ffffff;        /* 指示書: 背景 #ffffff */
+    color: #1e1e1e;                   /* 指示書: 文字色 #1e1e1e */
+    line-height: 1.4;
+    padding: 40px 20px;
+}
+
+/* 全体幅を制限するコンテナ */
+.page-container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* ヘッダー：横並び・両端配置 */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    margin-bottom: 48px; /* 余白ルール: 8の倍数 */
+}
+
+.site-header .logo {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* ヒーローセクション */
+.hero-section {
+    margin-bottom: 48px;
+}
+
+.text-large {
+    font-size: 48px; /* 指示書: 大見出し 48px */
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.text-sub {
+    font-size: 16px; /* 指示書: 本文 16px */
+    color: #1e1e1e;
+    margin-bottom: 24px;
+}
+
+/* ヒーロー内の2つのボタンの配置（近接の原則: 8px） */
+.hero-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+/* パネル共通（角丸16px） */
+.panel {
+    border-radius: 16px; /* 指示書: パネル角丸 16 */
+    padding: 32px 24px;
+    margin-bottom: 32px;
+}
+
+/* 特徴パネル（グレー背景） */
+.panel-feature {
+    background-color: #f5f5f5; /* 指示書: 特徴＝グレー #f5f5f5 */
+}
+
+.text-heading {
+    font-size: 24px; /* 指示書: 見出し 24px */
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+/* 3カラムの商品グリッド（近接の原則: 間隔16px） */
+.product-grid {
+    display: flex;
+    gap: 16px;
+}
+
+/* 商品カード（角丸12px、枠線 #d9d9d9、白背景） */
+.product-card {
+    flex: 1;
+    background-color: #ffffff; /* 指示書: 白背景 */
+    border: 1px solid #d9d9d9; /* 指示書: 枠線 #d9d9d9 */
+    border-radius: 12px;       /* 指示書: カード角丸 12 */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 商品画像プレースホルダー（薄青色、カンプ準拠） */
+.product-image-placeholder {
+    background-color: #d6ebff;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #2b579a;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* カード内テキストエリア */
+.product-info {
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1e1e1e;
+    margin-bottom: 12px;
+}
+
+.product-desc {
+    font-size: 13px;
+    color: #757575; /* 指示書: 補助の文字 #757575 */
+    margin-bottom: 16px;
+    min-height: 38px;
+}
+
+.product-price {
+    font-size: 16px;
+    font-weight: 700;
+    color: #e63946; /* カンプの赤色価格表記 */
+    margin-bottom: 16px;
+}
+
+/* 黒背景のCTAパネル */
+.panel-cta {
+    background-color: #2c2c2c; /* 指示書: CTA＝黒 #2c2c2c */
+    text-align: center;
+    padding: 48px 24px;
+}
+
+.panel-cta .text-heading {
+    margin-bottom: 16px;
+}
+
+.color-white {
+    color: #ffffff;
+}
+
+/* ボタンの基本ルール（角丸8px） */
+.btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px; /* 指示書: 角丸 8 */
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+/* 黒ボタン（指示書基本） */
+.btn-dark {
+    background-color: #2c2c2c; /* 指示書: 背景は #2c2c2c */
+    color: #ffffff;            /* 指示書: 文字は白 */
+}
+
+/* 白・薄グレーボタン */
+.btn-light {
+    background-color: #e0e0e0;
+    color: #1e1e1e;
+    border: 1px solid #d9d9d9;
+}
+
+/* 購入するボタン（カンプの鮮やかな青色） */
+.btn-primary {
+    background-color: #2563eb;
+    color: #ffffff;
+    width: 100%;
+    margin-top: auto; /* カードの下部に固定 */
+}
+
+/* フッター表記 */
+.site-footer {
+    margin-top: 48px;
+    font-size: 12px;
+    color: #757575;
+}

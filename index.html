@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ワイヤレスイヤホン 商品ページ</title>
+    <!-- Google FontsよりInterフォントを読み込み（デザイン指示書指定） -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 全体を囲むコンテナ（カンプの余白感を再現） -->
+    <div class="page-container">
+
+        <!-- ヘッダーエリア：ロゴとボタンを左右に配置 -->
+        <header class="site-header">
+            <div class="logo">ロゴ</div>
+            <button class="btn btn-dark">Button</button>
+        </header>
+
+        <!-- ヒーローエリア（大見出しとひとこと、ボタン2つ） -->
+        <section class="hero-section">
+            <h1 class="text-large">大見出し</h1>
+            <p class="text-sub">ひとこと</p>
+            <div class="hero-buttons">
+                <button class="btn btn-dark">Button</button>
+                <button class="btn btn-light">Button</button>
+            </div>
+        </section>
+
+        <!-- 商品紹介セクション：グレー背景のパネル（角丸16px） -->
+        <section class="panel panel-feature">
+            <h2 class="text-heading">見出し</h2>
+            
+            <!-- 3カラムの商品カードグリッド -->
+            <div class="product-grid">
+                
+                <!-- 商品カード 1 -->
+                <article class="product-card">
+                    <div class="product-image-placeholder">商品画像</div>
+                    <div class="product-info">
+                        <h3 class="product-title">ワイヤレスイヤホン</h3>
+                        <p class="product-desc">軽量で長時間再生できる<br>Bluetoothイヤホン。</p>
+                        <p class="product-price">¥4,980</p>
+                        <button class="btn btn-primary">購入する</button>
+                    </div>
+                </article>
+
+                <!-- 商品カード 2 -->
+                <article class="product-card">
+                    <div class="product-image-placeholder">商品画像</div>
+                    <div class="product-info">
+                        <h3 class="product-title">ワイヤレスイヤホン</h3>
+                        <p class="product-desc">軽量で長時間再生できる<br>Bluetoothイヤホン。</p>
+                        <p class="product-price">¥4,980</p>
+                        <button class="btn btn-primary">購入する</button>
+                    </div>
+                </article>
+
+                <!-- 商品カード 3 -->
+                <article class="product-card">
+                    <div class="product-image-placeholder">商品画像</div>
+                    <div class="product-info">
+                        <h3 class="product-title">ワイヤレスイヤホン</h3>
+                        <p class="product-desc">軽量で長時間再生できる<br>Bluetoothイヤホン。</p>
+                        <p class="product-price">¥4,980</p>
+                        <button class="btn btn-primary">購入する</button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- 下部パネル：黒背景のCTAパネル（角丸16px） -->
+        <section class="panel panel-cta">
+            <h2 class="text-heading color-white">見出し</h2>
+            <button class="btn btn-light">Button</button>
+        </section>
+
+        <!-- フッターエリア：クレジット表記 -->
+        <footer class="site-footer">
+            <p>デザイン土台：Simple Design System (Figma Community, figma/sds) / CC BY 4.0</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
